@@ -26,35 +26,32 @@ const project = [
 
 export default function Home() {
   return (
-    <div className="flex">
-      <header className="lg:w-1/2">
-
-      {/* PROFILE */}
-        <h1>Rizki Alfi</h1>
-        <h2>Frontend Developer</h2>
-        <p>I build clean, performant, and accessible web interfasces</p>
-        <br />
+    <div className="flex p-14 pt-24 tracking-tight">
+      <header className="lg:w-1/2 ml-7 flex flex-col gap-3">
+        {/* PROFILE */}
+        <h1 className="text-5xl font-bold">Rizki Alfi</h1>
+        <h2 className="text-xl font-bold">Frontend Developer</h2>
+        <p className="font-medium">I build clean, performant, and accessible web interfaces</p>
 
         {/* NAVIGATION */}
-        <nav>
-          <ul>
+        <nav className="mt-24">
+          <ul className="flex flex-col gap-3 text-sm font-bold">
             {navLink.map((item) => (
               <li key={item.name}>
-                <a href="item.url">
+                <a href={item.url}>
                   <span>{item.name}</span>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-        <br />
 
         {/* CONTACTS */}
-        <nav>
-          <ul>
+        <nav className="mt-10">
+          <ul className="flex gap-3">
             {contactLink.map((item) => (
               <li key={item.name}>
-                <a href="item.url">
+                <a href={item.url}>
                   <span>{item.name}</span>
                 </a>
               </li>
@@ -63,17 +60,16 @@ export default function Home() {
         </nav>
       </header>
       <div className="lg:w-1/2">
-        <main>
-
+        <main className="flex flex-col gap-20">
           {/* SECTION 1: ABOUT */}
-          <section id="about">
+          <section id="about" className="flex flex-col gap-4 font-medium">
             <p>
               Hi there! I'm Alfi, and I build modern digital experiences. My
               journey with code started back in vocational high school (SMK)
               where I studied Software Engineering. Today, I am fully focused on
               frontend development, specializing in crafting clean, accessible,
               and detail-oriented user interfaces.
-            </p> <br />
+            </p>
             <p>
               Before diving deep into engineering, I helped build and run
               operations for a family-owned garment business. I wore many
@@ -82,7 +78,7 @@ export default function Home() {
               fast-paced nature of a scaling business taught me extreme
               adaptability, resilience, and a sharp eye for operational
               efficiency—traits I now apply to writing robust, scalable code.
-            </p> <br />
+            </p>
             <p>
               My path to tech is driven by pure grit. Currently, I fund my
               transition by working as a ride-hailing driver during the day,
@@ -90,14 +86,14 @@ export default function Home() {
               mastering frontend architecture and professional English. This
               intense daily discipline is fueled by my ultimate goal: securing a
               remote role in the global tech industry.
-            </p> <br />
+            </p>
             <p>
               When I step away from the keyboard, I enjoy analyzing
               cryptocurrency market trends, studying the Japanese language, and
               simply taking a moment to breathe before the next night-shift
               coding session begins.
-            </p> <br />
-          </section> <br />
+            </p>
+          </section>
 
           {/* SECTION 2: TECH STACKS */}
           <section id="skills">
@@ -106,7 +102,7 @@ export default function Home() {
                 <li key={item.name}>{item.name}</li>
               ))}
             </ul>
-          </section> <br />
+          </section>
 
           {/* SECTION 3: PROJECTS */}
           <section id="projects">
@@ -118,12 +114,11 @@ export default function Home() {
               </ul>
             </nav>
           </section>
-        </main> <br />
+        </main>
 
-        <footer>
+        <footer className="mt-20">
           <p>
-            @ 2026 Rizki Alfi. <br />
-            Built with Next.js, TypeScript, Tailwind CSS & shadcn/ui.
+            @ 2026 Rizki Alfi. Built with Next.js, TypeScript & Tailwind CSS.
           </p>
         </footer>
       </div>
