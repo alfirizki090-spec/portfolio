@@ -26,16 +26,22 @@ const project = [
 
 export default function Home() {
   return (
-    <div className="flex p-14 pt-24 tracking-tight">
-      <header className="lg:w-1/2 ml-7 flex flex-col gap-3">
+    <div className="mx-auto w-full flex flex-col flex-1 py-12 gap-4 lg:flex-row lg:px-6 lg:py-24 bg-slate-900 text-slate-400">
+      <header className="px-6 flex flex-col gap-3 lg:w-1/4 lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)]">
         {/* PROFILE */}
-        <h1 className="text-5xl font-bold">Rizki Alfi</h1>
-        <h2 className="text-xl font-bold">Frontend Developer</h2>
-        <p className="font-medium">I build clean, performant, and accessible web interfaces</p>
+        <h1 className="text-4xl lg:text-5xl font-bold text-slate-300 tracking-tight">
+          Rizki Alfi
+        </h1>
+        <h2 className="text-lg lg:text-xl font-bold text-slate-300 tracking-tight">
+          Frontend Developer
+        </h2>
+        <p className="mt-1 max-w-xs">
+          I build clean, performant, and accessible web interfaces
+        </p>
 
         {/* NAVIGATION */}
-        <nav className="mt-24">
-          <ul className="flex flex-col gap-3 text-sm font-bold">
+        <nav className="hidden lg:block lg:mt-15">
+          <ul className="flex flex-col gap-3 text-sm font-bold text-slate-300">
             {navLink.map((item) => (
               <li key={item.name}>
                 <a href={item.url}>
@@ -47,7 +53,7 @@ export default function Home() {
         </nav>
 
         {/* CONTACTS */}
-        <nav className="mt-10">
+        <nav className="mt-auto">
           <ul className="flex gap-3">
             {contactLink.map((item) => (
               <li key={item.name}>
@@ -59,10 +65,16 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <div className="lg:w-1/2">
-        <main className="flex flex-col gap-20">
+      <div className="lg:w-[53%] lg:ml-auto">
+        <main className="flex flex-col flex-1 lg:gap-24">
           {/* SECTION 1: ABOUT */}
-          <section id="about" className="flex flex-col gap-4 font-medium">
+          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
+            ABOUT
+          </h3>
+          <section
+            id="about"
+            className="flex flex-col gap-4 leading-relaxed px-6 pr-12"
+          >
             <p>
               Hi there! I'm Alfi, and I build modern digital experiences. My
               journey with code started back in vocational high school (SMK)
@@ -96,8 +108,11 @@ export default function Home() {
           </section>
 
           {/* SECTION 2: TECH STACKS */}
+          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
+            SKILLS
+          </h3>
           <section id="skills">
-            <ul className="flex gap-2">
+            <ul className="gap-2 px-6 grid grid-cols-2 lg:grid-cols-3">
               {techStack.map((item) => (
                 <li key={item.name}>{item.name}</li>
               ))}
@@ -105,7 +120,10 @@ export default function Home() {
           </section>
 
           {/* SECTION 3: PROJECTS */}
-          <section id="projects">
+          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
+            PROJECTS
+          </h3>
+          <section id="projects" className="px-6">
             <nav>
               <ul>
                 {project.map((item) => (
@@ -116,7 +134,7 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className="mt-20">
+        <footer className="mt-20 px-6">
           <p>
             @ 2026 Rizki Alfi. Built with Next.js, TypeScript & Tailwind CSS.
           </p>
