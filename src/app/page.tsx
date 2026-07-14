@@ -1,3 +1,8 @@
+import { FaGithub, FaLinkedin, FaEnvelope, FaReact, FaGitAlt } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { SiShadcnui } from "react-icons/si";
+
 const navLink = [
   { name: "ABOUT", url: "#about" },
   { name: "SKILLS", url: "#skills" },
@@ -5,43 +10,43 @@ const navLink = [
 ];
 
 const contactLink = [
-  { name: "Github", url: "" },
-  { name: "LinkedIn", url: "" },
-  { name: "Email", url: "" },
+  { name: "Github", url: "#", icon: <FaGithub className="w-6 h-6" />},
+  { name: "LinkedIn", url: "#", icon: <FaLinkedin className="w-6 h-6" /> },
+  { name: "Email", url: "#", icon: <FaEnvelope className="w-6 h-6" /> },
 ];
 
 const techStack = [
-  { name: "React", icon: "" },
-  { name: "Next.js", icon: "" },
-  { name: "TypeScript", icon: "" },
-  { name: "Tailwind CSS", icon: "" },
-  { name: "Git", icon: "" },
-  { name: "shadcn/ui", icon: "" },
+  { name: "React", icon: < FaReact className="w-9 h-9 text-blue-500" /> },
+  { name: "Next.js", icon: <RiNextjsFill className="w-9 h-9 text-black" /> },
+  { name: "TypeScript", icon: <BiLogoTypescript className="w-9 h-9 text-blue-500" /> },
+  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="w-9 h-9 text-blue-500" /> },
+  { name: "Git", icon: <FaGitAlt className="w-9 h-9 text-red-500"/> },
+  { name: "shadcn/ui", icon: <SiShadcnui className="w-9 h-9 bg-black rounded-md p-2"/> },
 ];
 
 const project = [
-  { name: "project 1", url: "" },
-  { name: "project 2", url: "" },
+  { name: "project 1", time: "January - March 2026", desc:"This is project 1", TS:["JavaScript", "HTML & CSS"], url: "#" },
+  { name: "project 2", time: "April - Present", desc:"This is project 2", TS:["TypeScript", "React", "Next.js"], url: "#" },
 ];
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full flex flex-col flex-1 py-12 gap-4 lg:flex-row lg:px-6 lg:py-24 bg-slate-900 text-slate-400">
+    <div className="mx-auto w-full flex flex-col flex-1 py-12 gap-4 lg:flex-row lg:px-6 lg:py-24 bg-slate-900 text-slate-400 selection:bg-cyan-300 selection:text-slate-600" id="about">
       <header className="px-6 flex flex-col gap-3 lg:w-1/4 lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)]">
         {/* PROFILE */}
-        <h1 className="text-4xl lg:text-5xl font-bold text-slate-300 tracking-tight">
+        <h1 className="text-4xl lg:text-5xl font-bold text-slate-200 tracking-tight">
           Rizki Alfi
         </h1>
-        <h2 className="text-lg lg:text-xl font-bold text-slate-300 tracking-tight">
+        <h2 className="text-lg lg:text-xl font-bold text-slate-200 tracking-tight">
           Frontend Developer
         </h2>
-        <p className="mt-1 max-w-xs">
-          I build clean, performant, and accessible web interfaces
+        <p className="mt-1">
+          I build clean, performant, and <br /> accessible web interfaces
         </p>
 
         {/* NAVIGATION */}
         <nav className="hidden lg:block lg:mt-15">
-          <ul className="flex flex-col gap-3 text-sm font-bold text-slate-300">
+          <ul className="flex flex-col gap-3 text-sm font-bold text-slate-200">
             {navLink.map((item) => (
               <li key={item.name}>
                 <a href={item.url}>
@@ -53,12 +58,12 @@ export default function Home() {
         </nav>
 
         {/* CONTACTS */}
-        <nav className="mt-auto">
-          <ul className="flex gap-3">
+        <nav className="px-1 py-5 lg:mt-auto">
+          <ul className="flex gap-5">
             {contactLink.map((item) => (
               <li key={item.name}>
-                <a href={item.url}>
-                  <span>{item.name}</span>
+                <a href={item.url} className="hover:text-cyan-300">
+                  <span>{item.icon}</span>
                 </a>
               </li>
             ))}
@@ -68,11 +73,10 @@ export default function Home() {
       <div className="lg:w-[53%] lg:ml-auto">
         <main className="flex flex-col flex-1 lg:gap-24">
           {/* SECTION 1: ABOUT */}
-          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
+          <h3 className="font-bold text-sm text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
             ABOUT
           </h3>
           <section
-            id="about"
             className="flex flex-col gap-4 leading-relaxed px-6 pr-12"
           >
             <p>
@@ -108,26 +112,39 @@ export default function Home() {
           </section>
 
           {/* SECTION 2: TECH STACKS */}
-          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
+          <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
             SKILLS
           </h3>
           <section id="skills">
-            <ul className="gap-2 px-6 grid grid-cols-2 lg:grid-cols-3">
+            <ul className="gap-4 px-6 grid grid-cols-2 lg:grid-cols-3">
               {techStack.map((item) => (
-                <li key={item.name}>{item.name}</li>
+                <li key={item.name} className="flex items-center py-2 px-1 gap-2 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300">{item.icon}{item.name}</li>
               ))}
             </ul>
           </section>
 
           {/* SECTION 3: PROJECTS */}
-          <h3 className="font-bold text-slate-300 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
+          <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
             PROJECTS
           </h3>
           <section id="projects" className="px-6">
             <nav>
-              <ul>
+              <ul className="flex flex-col gap-5">
                 {project.map((item) => (
-                  <li key={item.name}>{item.name}</li>
+                  <li key={item.name} className=" lg:flex lg:items-start py-2 px-3 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300">
+                      <div className="text-xs lg:w-1/3 mt-1">
+                        {item.time}
+                      </div>
+                      <div className="lg:w-2/3 flex flex-col gap-3">
+                          <h4>{item.name}</h4>
+                          <p className="text-xs">{item.desc}</p>
+                          <ul className="flex flex-wrap gap-2">
+                            {item.TS.map((stack) => (
+                              <li key={stack} className="rounded-full bg-teal-950/30 px-3 py-1 text-xs font-medium text-teal-300">{stack}</li>
+                            ))}
+                          </ul>
+                        </div>
+                    </li>
                 ))}
               </ul>
             </nav>
