@@ -25,7 +25,7 @@ const techStack = [
 ];
 
 const project = [
-  { name: "project 1", time: "January - March 2026", desc:"This is project 1", TS:["JavaScript", "HTML & CSS"], url: "#" },
+  { name: "project 1", time: "Jan - March 2026", desc:"This is project 1", TS:["JavaScript", "HTML & CSS"], url: "#" },
   { name: "project 2", time: "April - Present", desc:"This is project 2", TS:["TypeScript", "React", "Next.js"], url: "#" },
 ];
 
@@ -46,11 +46,12 @@ export default function Home() {
 
         {/* NAVIGATION */}
         <nav className="hidden lg:block lg:mt-15">
-          <ul className="flex flex-col gap-3 text-sm font-bold text-slate-200">
+          <ul className="flex flex-col gap-4 text-sm font-bold">
             {navLink.map((item) => (
               <li key={item.name}>
-                <a href={item.url}>
-                  <span>{item.name}</span>
+                <a href={item.url} className="group inline-flex items-center">
+                  <span className="mr-4 h-px w-8 bg-slate-500 transition-all duration-300 group-hover:w-16 group-hover:bg-slate-200"></span>
+                  <span className="text-xs font-bold tracking-widest text-slate-500 transition-all duration-300 group-hover:text-slate-200">{item.name}</span>
                 </a>
               </li>
             ))}
@@ -58,7 +59,7 @@ export default function Home() {
         </nav>
 
         {/* CONTACTS */}
-        <nav className="px-1 py-5 lg:mt-auto">
+        <nav className="px-1 lg:mt-auto">
           <ul className="flex gap-5">
             {contactLink.map((item) => (
               <li key={item.name}>
@@ -109,38 +110,40 @@ export default function Home() {
               simply taking a moment to breathe before the next night-shift
               coding session begins.
             </p>
-          </section>
+            <div id="skills" />
+          </section >
 
           {/* SECTION 2: TECH STACKS */}
           <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
             SKILLS
           </h3>
-          <section id="skills">
+          <section>
             <ul className="gap-4 px-6 grid grid-cols-2 lg:grid-cols-3">
               {techStack.map((item) => (
                 <li key={item.name} className="flex items-center py-2 px-1 gap-2 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300">{item.icon}{item.name}</li>
               ))}
             </ul>
+            <div id="projects" />
           </section>
 
           {/* SECTION 3: PROJECTS */}
           <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
             PROJECTS
           </h3>
-          <section id="projects" className="px-6">
+          <section className="px-6">
             <nav>
               <ul className="flex flex-col gap-5">
                 {project.map((item) => (
                   <li key={item.name} className=" lg:flex lg:items-start py-2 px-3 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300">
-                      <div className="text-xs lg:w-1/3 mt-1">
+                      <div className="text-sm lg:w-1/4 mt-1 text-slate-400">
                         {item.time}
                       </div>
-                      <div className="lg:w-2/3 flex flex-col gap-3">
-                          <h4>{item.name}</h4>
-                          <p className="text-xs">{item.desc}</p>
+                      <div className="lg:w-3/4 flex flex-col gap-3">
+                          <h4 className="text-slate-200">{item.name}</h4>
+                          <p className="text-sm">{item.desc}</p>
                           <ul className="flex flex-wrap gap-2">
                             {item.TS.map((stack) => (
-                              <li key={stack} className="rounded-full bg-teal-950/30 px-3 py-1 text-xs font-medium text-teal-300">{stack}</li>
+                              <li key={stack} className="rounded-full bg-teal-700/30 px-3 py-1 text-xs font-medium text-teal-400">{stack}</li>
                             ))}
                           </ul>
                         </div>
@@ -151,7 +154,7 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className="mt-20 px-6">
+        <footer className="mt-20 px-6 text-xs text-slate-200">
           <p>
             @ 2026 Rizki Alfi. Built with Next.js, TypeScript & Tailwind CSS.
           </p>
