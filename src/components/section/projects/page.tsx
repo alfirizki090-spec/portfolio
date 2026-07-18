@@ -17,17 +17,17 @@ const project = [
 
 export default function Project() {
   return (
-    <div className="lg:pt-24" id="projects">
+    <section className="lg:pt-21" id="projects">
       <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 lg:hidden">
         PROJECTS
       </h3>
-      <section className="px-6">
+      <div className="px-6">
         <nav>
           <ul className="flex flex-col gap-5">
             {project.map((item) => (
               <li
                 key={item.name}
-                className=" lg:flex lg:items-start py-2 px-3 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300"
+                className=" lg:flex lg:items-start lg:px-3 py-2 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300"
               >
                 <div className="text-sm lg:w-1/4 mt-1 text-slate-400">
                   {item.time}
@@ -50,7 +50,7 @@ export default function Project() {
             ))}
           </ul>
         </nav>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

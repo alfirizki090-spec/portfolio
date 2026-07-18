@@ -5,7 +5,7 @@ export default function Profile() {
         Rizki Alfi
       </h1>
       <h2 className="text-lg lg:text-xl font-bold text-slate-200 tracking-tight">
-        Frontend Developer
+        Junior Frontend Developer
       </h2>
       <p className="mt-1">
         I build clean, performant, and <br /> accessible web interfaces

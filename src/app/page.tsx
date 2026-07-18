@@ -2,7 +2,7 @@ import Profile from "@/components/section/profile/page";
 import Navigation from "@/components/layout/navigation/page";
 import Contact from "@/components/section/contact/page";
 import About from "@/components/section/about/page";
-import TechStack from "@/components/section/tech_stacks/page";
+import Expertise from "@/components/section/expertise/page";
 import Project from "@/components/section/projects/page";
 import Footer from "@/components/layout/footer/page";
 
@@ -22,7 +22,7 @@ export default function Home() {
       <div className="lg:w-[53%] lg:ml-auto">
         <main className="flex flex-col flex-1">
           <About />
-          <TechStack />
+          <Expertise />
           <Project />
         </main>
         <Footer />
