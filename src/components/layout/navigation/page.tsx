@@ -32,7 +32,7 @@ export default function Navigation() {
       <nav className="hidden lg:block lg:mt-15">
         <ul className="flex flex-col gap-4 text-sm font-bold">
           {navLink.map((item) => {
-            // Logika pencocokan: Jika memori sama dengan id tombol, maka isActive menjadi "true" (Lampu menyala)
+            
             const isActive = activeSection === item.id;
 
             return (

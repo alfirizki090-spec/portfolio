@@ -27,13 +27,15 @@ export default function Project() {
             {project.map((item) => (
               <li
                 key={item.name}
-                className=" lg:flex lg:items-start lg:px-3 py-2 rounded-sm hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300"
+                className=" lg:flex lg:items-start lg:px-3 py-2 rounded-sm lg:hover:bg-white/10 lg:hover:backdrop-blur-sm transition-all duration-300"
               >
                 <div className="text-sm lg:w-1/4 mt-1 text-slate-400">
                   {item.time}
                 </div>
                 <div className="lg:w-3/4 flex flex-col gap-3">
-                  <h4 className="text-slate-200">{item.name}</h4>
+                  <a 
+                  href={item.url}
+                  className="text-slate-200 hover:text-teal-400 w-fit">{item.name}</a>
                   <p className="text-sm">{item.desc}</p>
                   <ul className="flex flex-wrap gap-2">
                     {item.TS.map((stack) => (
