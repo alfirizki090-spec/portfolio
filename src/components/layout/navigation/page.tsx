@@ -1,15 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const navLink = [
-  { name: "ABOUT",id: "about", url: "#about" },
-  { name: "EXPERTISE",id: "ts", url: "#ts" },
-  { name: "PROJECTS",id: "projects", url: "#projects" },
+interface NavItem {
+  name: string;
+  id: string;
+  url: string;
+}
+
+const navLink: NavItem[] = [
+  { name: "ABOUT", id: "about", url: "#about" },
+  { name: "EXPERTISE", id: "expertise", url: "#expertise" },
+  { name: "PROJECTS", id: "projects", url: "#projects" },
 ];
 
 export default function Navigation() {
-
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,7 +25,7 @@ export default function Navigation() {
           }
         });
       },
-      {rootMargin: "0px 0px -100% 0px", threshold: 0 }
+      { rootMargin: "0px 0px -100% 0px", threshold: 0 },
     );
     const section = document.querySelectorAll("section[id]");
     section.forEach((section) => observer.observe(section));
@@ -32,7 +37,6 @@ export default function Navigation() {
       <nav className="hidden lg:block lg:mt-15">
         <ul className="flex flex-col gap-4 text-sm font-bold">
           {navLink.map((item) => {
-            
             const isActive = activeSection === item.id;
 
             return (

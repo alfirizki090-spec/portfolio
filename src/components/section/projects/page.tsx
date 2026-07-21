@@ -1,4 +1,12 @@
-const project = [
+interface ProjectItem {
+  name: string;
+  time: string;
+  desc: string;
+  TS: string[];
+  url: string;
+}
+
+const project: ProjectItem[] = [
   {
     name: "project 1",
     time: "Jan - March 2026",
@@ -33,9 +41,12 @@ export default function Project() {
                   {item.time}
                 </div>
                 <div className="lg:w-3/4 flex flex-col gap-3">
-                  <a 
-                  href={item.url}
-                  className="text-slate-200 hover:text-teal-400 w-fit">{item.name}</a>
+                  <a
+                    href={item.url}
+                    className="text-slate-200 hover:text-teal-400 w-fit"
+                  >
+                    {item.name}
+                  </a>
                   <p className="text-sm">{item.desc}</p>
                   <ul className="flex flex-wrap gap-2">
                     {item.TS.map((stack) => (
