@@ -12,7 +12,7 @@ export default function Home() {
       className="mx-auto w-full flex flex-col flex-1 py-12 gap-4 lg:flex-row lg:px-6 lg:py-0 bg-slate-900 text-slate-400 selection:bg-cyan-300 selection:text-slate-600"
     >
       {/* Left Side Split-Screen (Sticky) */}
-      <header className="px-6 flex flex-col gap-3 lg:w-1/4 lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)]">
+      <header className="ml-14 flex flex-col gap-3 lg:w-1/4 lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)]">
         <Profile />
         <Navigation />
         <Contact />

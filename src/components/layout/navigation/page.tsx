@@ -25,7 +25,7 @@ export default function Navigation() {
           }
         });
       },
-      { rootMargin: "0px 0px -100% 0px", threshold: 0 },
+      { rootMargin: "-20% 0px -80% 0px", threshold: 0 },
     );
     const section = document.querySelectorAll("section[id]");
     section.forEach((section) => observer.observe(section));

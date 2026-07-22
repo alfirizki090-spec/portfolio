@@ -38,10 +38,16 @@ export default function Project() {
           {project.map((item) => (
             <li
               key={item.name}
-              className="relative lg:flex lg:items-start lg:px-6 py-4 rounded-sm lg:hover:bg-white/10 lg:hover:backdrop-blur-sm transition-all duration-300"
+              className="relative lg:flex lg:items-start lg:px-5 py-4 rounded-sm lg:hover:bg-white/10 lg:hover:backdrop-blur-sm transition-all duration-300"
             >
               {/* Image */}
               <div className="lg:w-1/4 mt-1 mb-3">
+              <a 
+              href={item.url}
+              aria-hidden="true"
+              tabIndex={-1}
+              className="inline-block w-fit transition-opacity duration-300 hover:opacity-80"
+              >
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -49,6 +55,7 @@ export default function Project() {
                   height={200}
                   className="w-fit h-24 lg:h-20 object-contain rounded border border-slate-700/50 shadow-sm"
                 />
+                </a>
               </div>
 
               {/* Title and description */}
