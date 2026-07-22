@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { FaReact, FaGitAlt } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiShadcnui } from "react-icons/si";
@@ -22,16 +22,15 @@ interface TsItem {
 
 const techStack: TsItem[] = [
   { name: "React", icon: <FaReact className="w-9 h-9 text-blue-500" /> },
-  { name: "Next.js", icon: <RiNextjsFill className="w-9 h-9 text-black" /> },
-  {
-    name: "TypeScript",
-    icon: <BiLogoTypescript className="w-9 h-9 text-blue-500" />,
-  },
   {
     name: "Tailwind CSS",
     icon: <RiTailwindCssFill className="w-9 h-9 text-blue-500" />,
   },
-  { name: "Git", icon: <FaGitAlt className="w-9 h-9 text-red-500" /> },
+  {
+    name: "TypeScript",
+    icon: <BiLogoTypescript className="w-9 h-9 text-blue-500" />,
+  },
+  { name: "Next.js", icon: <RiNextjsFill className="w-9 h-9 text-black" /> },
   {
     name: "shadcn/ui",
     icon: <SiShadcnui className="w-9 h-9 bg-black rounded-md p-2" />,

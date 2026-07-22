@@ -15,7 +15,7 @@ function ExternalLink({ href, children }: ExternalLinkProps) {
 
 export default function Footer() {
   return (
-    <footer className="mt-20 px-6 text-xs lg:py-24">
+    <footer className="mt-8 px-6 text-xs lg:py-24">
       <p>
         @ 2026 Rizki Alfi. Built with{" "}
         <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>,{" "}
