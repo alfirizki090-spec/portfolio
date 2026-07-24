@@ -9,6 +9,7 @@ export const ArrowUpRight = ({ className, ...props }: React.ComponentPropsWithou
       strokeLinecap="round"
       strokeLinejoin="round"
       className={`w-4 h-4 ${className || ""}`}
+      {...props}
     >
       <path d="M7 17L17 7M7 7h10v10" />
     </svg>

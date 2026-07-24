@@ -40,7 +40,7 @@ const techStack: TsItem[] = [
 export default function Expertise() {
   return (
     <section className="lg:pt-18" id="expertise">
-      <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
+      <h3 className="font-bold text-sm tracking-widest text-slate-200 bg-slate-900/70 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
         EXPERTISE
       </h3>
       <h4 className="font-bold bg-linear-to-r from-pink-400 to-blue-500 bg-clip-text w-fit text-transparent text-lg py-6 px-6">

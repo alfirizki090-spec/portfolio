@@ -8,7 +8,7 @@ interface ContactItem {
   icon: ReactNode;
 }
 
-const contactLink: ContactItem[] = [
+const contactLinks: ContactItem[] = [
   {
     name: "Github",
     url: "https://github.com/alfirizki090-spec",
@@ -27,12 +27,14 @@ export default function Contact() {
     <div className="lg:mt-auto">
       <nav>
         <ul className="px-1 flex gap-5">
-          {contactLink.map((item) => (
+          {contactLinks.map((item) => (
             <li key={item.name}>
               <a
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={item.name}
+                title={item.name}
                 className="hover:text-cyan-300"
               >
                 <span>{item.icon}</span>

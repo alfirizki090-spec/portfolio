@@ -3,7 +3,3 @@
 @theme inline {
   --font-sans: var(--font-inter);
 }
-
-.link {
-    @apply text-slate-300/80 hover:text-teal-200 font-bold text-sm;
-  }

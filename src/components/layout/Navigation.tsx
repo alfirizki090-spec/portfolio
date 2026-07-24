@@ -27,8 +27,8 @@ export default function Navigation() {
       },
       { rootMargin: "-20% 0px -80% 0px", threshold: 0 },
     );
-    const section = document.querySelectorAll("section[id]");
-    section.forEach((section) => observer.observe(section));
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 

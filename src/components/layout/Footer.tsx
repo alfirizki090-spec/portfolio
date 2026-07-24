@@ -7,7 +7,7 @@ interface ExternalLinkProps {
 
 function ExternalLink({ href, children }: ExternalLinkProps) {
   return (
-    <a href={href} className="link" target="_blank" rel="noopener noreferrer">
+    <a href={href} className="text-slate-300/80 hover:text-teal-200 font-bold text-sm" target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );
@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="mt-8 px-6 text-sm lg:py-24">
       <p>
-        @ 2026 Rizki Alfi. Built with{" "}
+        Built with{" "}
         <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>,{" "}
         <ExternalLink href="https://www.typescriptlang.org/">
           TypeScript

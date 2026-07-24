@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "@/components/ui/arrowUpRight-icon";
+import { ArrowUpRight } from "@/components/ui/ArrowUpRightIcon";
 import Image from "next/image";
 
 interface ProjectItem {
@@ -9,18 +9,18 @@ interface ProjectItem {
   url: string;
 }
 
-const project: ProjectItem[] = [
+const projects: ProjectItem[] = [
   {
     name: "Project 1",
     image: "/example1.jpeg",
-    desc: "This is project 1",
+    desc: "Lorem ipsum dolor sit amet, ullamco proident eiusmod cillum. Nisi exercitation ea laborum in exercitation quis tempor minim deserunt dolore mollit. Cupidatat dolore enim anim ut labore ea ad.",
     TS: ["JavaScript", "HTML & CSS"],
     url: "#",
   },
   {
     name: "Project 2",
     image: "/ex2.jpeg",
-    desc: "This is project 2",
+    desc: "Dolor nisi adipiscing ut veniam dolore esse eu enim reprehenderit adipiscing. Irure ut est cillum ut cillum incididunt veniam in ut. Ullamco in in culpa deserunt aliquip reprehenderit mollit ex culpa. Ut voluptate ut aliquip consectetur occaecat labore dolore tempor.",
     TS: ["TypeScript", "React", "Next.js"],
     url: "#",
   },
@@ -29,32 +29,32 @@ const project: ProjectItem[] = [
 export default function Project() {
   return (
     <section className="lg:pt-21" id="projects">
-      <h3 className="font-bold text-slate-200 bg-slate-900/80 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
+      <h3 className="font-bold text-sm tracking-widest text-slate-200 bg-slate-900/70 backdrop-blur-sm py-6 px-6 mt-15 sticky top-0 z-10 lg:hidden">
         PROJECTS
       </h3>
 
       <nav className="px-6">
         <ul className="flex flex-col gap-5">
-          {project.map((item) => (
+          {projects.map((item) => (
             <li
               key={item.name}
               className="relative lg:flex lg:items-start lg:px-5 py-4 rounded-sm lg:hover:bg-white/10 lg:hover:backdrop-blur-sm transition-all duration-300"
             >
               {/* Image */}
               <div className="lg:w-1/4 mt-1 mb-3">
-              <a 
-              href={item.url}
-              aria-hidden="true"
-              tabIndex={-1}
-              className="inline-block w-fit transition-opacity duration-300 hover:opacity-80"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={400}
-                  height={200}
-                  className="w-fit h-24 lg:h-20 object-contain rounded border border-slate-700/50 shadow-sm"
-                />
+                <a
+                  href={item.url}
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  className="inline-block w-fit transition-opacity duration-300 hover:opacity-80"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={400}
+                    height={200}
+                    className="w-fit h-24 lg:h-20 object-contain rounded border border-slate-700/50 shadow-sm"
+                  />
                 </a>
               </div>
 
